@@ -3,13 +3,13 @@
 {% block total %}{{mos_list|length}}{% endblock %}
 
 {% block header_content %}
-    <p>Nafn á prófi: {{mos.get_display_name}}</p>
-    <p>Þetta próf notar {% if not mos.use_latin_square %}<span class="text-warning">ekki</span> {% endif %}Latin Square</p>
-    <p>Þetta próf sýnir {% if not mos.show_text_in_test %}<span class="text-warning">ekki</span> {% endif %}texta setningar sem hlustað er á</p>
+    <p>{{_("test_name")}}: {{mos.get_display_name}}</p>
+    <p>{{_("this_test_uses")}} {% if not mos.use_latin_square %}<span class="text-warning">{{_("not")}}</span> {% endif %}Latin Square</p>
+    <p>{{_("this_test_shows")}} {% if not mos.show_text_in_test %}<span class="text-warning">{{_("not")}}</span> {% endif %}{{_("the_text_of_the_sentences_being_listened_to")}}</p>
     <div class="float-left text-warning">
         {% if not mos.number_selected > 0%}
             {% if mos_list | length == 0%}
-                <span id="additional-info">Hladdu upp setningum til að búa til MOS próf</span>
+                <span id="additional-info">{{_("hint_load_settings")}}</span>
             {% else %}
                 <span id="additional-info">Veldu setningar til að nota í prófinu</span>
             {% endif %}
@@ -23,48 +23,48 @@
     {% if current_user.is_admin() %}
         <button class="btn btn-secondary btn-sm float-right mr-2 mt-2" type="button" data-toggle='modal', data-target='#uploadMOSModal'>
             {{macros.btn_icon('upload', 'r')}}
-            Hlaða upp
+            {{_("btn_load")}}
         </button>
         <a href='{{url_for("mos.stream_MOS_zip", mos_id=mos.id)}}' class='btn btn-primary btn-sm float-right mr-2 mt-2'>
             {{macros.btn_icon('download', 'r')}}
-            Sækja upptökur
+            {{_("btn_fetch_records")}}
         </a>
         {% if mos.number_selected > 0%}
             <a class='btn btn-secondary btn-sm text-success float-right mr-2 mt-2' id='start-button' href='{{url_for("mos.mos_test", id=mos.id, uuid=current_user.uuid)}}'>
                 {{macros.btn_icon('play', 'r')}}
-                Hefja MOS próf
+                {{_("btn_start_mos_test")}}
             </a>
         {% else %}
             <a disabled class='btn btn-secondary btn-sm text-success float-right mr-2 disabled mt-2' id='start-button' href='{{url_for("mos.mos_test", id=mos.id, uuid=current_user.uuid)}}'>
                 {{macros.btn_icon('play', 'r')}}
-                Hefja MOS próf
+                {{_("btn_start_mos_test")}}
             </a>
         {% endif %}
         {% if mos.number_selected > 0%}
             <a class='btn btn-secondary btn-sm text-success float-right mr-2 mt-2' id='get-link-button' href='{{url_for("mos.take_mos_test", mos_uuid=mos.uuid)}}'>
                 {{macros.btn_icon('link', 'r')}}
-                Hlekkur á próf
+                {{_("btn_test_leak")}}
             </a>
         {% else %}
             <a disabled class='btn btn-secondary btn-sm text-success float-right mr-2 mt-2 disabled' id='get-link-button' href='{{url_for("mos.take_mos_test", mos_uuid=mos.uuid)}}'>
                 {{macros.btn_icon('link', 'r')}}
-                Hlekkur á próf
+                {{_("btn_test_leak")}}
             </a>
         {% endif %}
         {% if ratings | length  > 0%}
             <a class='btn btn-secondary btn-sm text-success float-right mt-2 mr-2' href='{{url_for("mos.mos_results", mos_id=mos.id)}}'>
                 {{macros.btn_icon('chart-bar', 'r')}}
-                Skoða niðurstöður
+                {{_("btn_view_results")}}
             </a>
         {% else %}
             <a class='btn btn-secondary btn-sm text-success float-right mt-2 mr-2 disabled' href='{{url_for("mos.mos_results", mos_id=mos.id)}}'>
                 {{macros.btn_icon('chart-bar', 'r')}}
-                Skoða niðurstöður
+                {{_("btn_view_results")}}
             </a>
         {% endif %}
         <a class='btn btn-secondary btn-sm text-success float-right mt-2 mr-2' href='{{url_for("mos.mos_edit_detail", mos_id=mos.id)}}'>
             {{macros.btn_icon('edit', 'r')}}
-            Breyta stillingum
+            {{_("btn_change_settings")}}
         </a>
     {% endif %}
 {% endblock %}
@@ -73,8 +73,8 @@
     {% if mos_list | length > 0%}
         <div>
             <div>
-                <h3>Talgervingar sem búnar voru til</h3>
-                <p>Hljóðklippur sem búnar voru til með hjálp talgervils</p>
+                <h3>{{_("created_talker_angles")}}</h3>
+                <p>{{_("audio_clips_made_using_a_digital_device")}}</p>
             </div>
 
             {% with mos=mos, mos_list=synths, isSynthTable=true, selectAllForm=select_all_forms[0], deselectAllForm=select_all_forms[1] %}
@@ -84,8 +84,8 @@
 
         <div class="mt-4">
             <div class="">
-                <h3 class="">Upptökur sem teknar voru upp</h3>
-                <p>Upptökur sem teknar voru upp af alvöru fólki</p>
+                <h3 class="">{{_("updates_recorded")}}</h3>
+                <p>{{_("events_recorded_by_real_people")}}</p>
             </div>
 
             {% with mos=mos, mos_list=ground_truths, isSynthTable=false, selectAllForm=select_all_forms[2], deselectAllForm=select_all_forms[3]%}
@@ -98,8 +98,8 @@
 {% block no_results %}
 
     {% if mos_list | length == 0 %}
-        {{macros.no_results("Engar setningar í mos prufu",
-            "Til að sjá setningar þarf fyrst að hlaða þeim upp.")}}
+        {{macros.no_results("No Phase Test Sets",
+            "To see sentences you have to load them up first.")}}
     {% endif %}
 {% endblock %}
 
@@ -109,28 +109,16 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Hlaða upp talgervingum fyrir MOS próf</h5>
+                    <h5 class="modal-title">{{_("title_load_dials")}}</h5>
                     <button type="button" class="close" data-dismiss="modal">
                     <span>&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <p>
-                        Athugaðu að hlaða þarf upp <code>.zip</code> skrá sem inniheldur möppu sem heitir <code>audio</code> og skrá sem heitir <code>index.csv</code>.
-                        <code>Audio</code> mappan inniheldur allar talgervingarnar á <code>.wav</code> formi og <code>index.tsv</code> tengir auðkenni hverrar MOS-setningar við nafn
-                        talgervingarinnar í audio möppunni. <br> <br>
-                        Í <code>index.csv</code> eru eftirfarandi dálkar:
-                        <li>(Áskilið) Dálkur 1 er nafn upptöku í <code>audio</code> möppunni.</li>
-                        <li>(Áskilið) Dálkur 2 er <code>R</code> ef setningin er upptaka en <code>S</code> ef setningin er talgerving.</li>
-                        <li>(Áskilið) Dálkur 3 er setningin sjálf. </li>
-                        <li>(Valkvætt) Dálkur 4 er númer á rödd, ef sama röddin les margar setningar þá á hún alltaf að bera sama númer hér </li>
-                        <li>(Valkvætt) Dálkur 5 er númer á setningu, ef margar raddir lesa sömu setninguna þá þurfa þær allar að bera sama númar hér </li>
-                        <li>(Valkvætt) Dálkur 6 er númer á modeli sem býr til röddina. </li>
-                        <li>(Valkvætt) Dálkur 7 er strengur eða annað sem þú vilt geta notað til að merkja klippuna. </li>
-                        <li>(Valkvætt) Dálkur 8 er spurning ef það á að bera upp spurningu fyrir notnendur. </li>
-                        
-                        <br>
-                        Sjá sýnidæmi
+                        {{_("hint_text_upload")}} <br> <br>
+                        {{_("desc_index_csv_file_columns")}} <br>
+                        {{_("see_example")}}
                     </p>
                     {% with form=mos_form %}
                         {% include 'forms/_form.jinja' %}
@@ -139,11 +127,11 @@
                 <div class="modal-footer">
                     <a href='{{url_for("mos.stream_MOS_index_demo")}}' class='btn btn-primary float-left mr-2'>
                         {{macros.btn_icon('download', 'r')}}
-                        Sýnidæmi
+                        {{_("download")}}
                     </a>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Loka</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{_("close")}}</button>
                     <button class='btn btn-primary' type='submit'>
-                        Klára
+                        {{_("submit")}}
                         <span class='ml-1'><i class='fa fa-check'></i></span>
                     </button>
 

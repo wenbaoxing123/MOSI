@@ -1,0 +1,193 @@
+# English translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-11-18 19:44+0800\n"
+"PO-Revision-Date: 2022-11-18 18:36+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+msgid "hint_text_star_field"
+msgstr "(*) Starmark field to fill"
+
+msgid "title_mos_test"
+msgstr "MOS test"
+
+msgid "user"
+msgstr "User"
+
+msgid "title_ab_test"
+msgstr "AB test"
+
+msgid "title_sus_test"
+msgstr "SUS test"
+
+msgid "other"
+msgstr "Other"
+
+msgid "create_mos"
+msgstr "Create MOS"
+
+msgid "date"
+msgstr "Date"
+
+msgid "identity"
+msgstr "Identity"
+
+msgid "question"
+msgstr "Question"
+
+msgid "number"
+msgstr "Number"
+
+msgid "previous"
+msgstr "Previous"
+
+msgid "next"
+msgstr "Next"
+
+msgid "of"
+msgstr "of"
+
+msgid "btn_change_settings"
+msgstr "Change settings"
+
+msgid "btn_view_results"
+msgstr "View results"
+
+msgid "btn_test_leak"
+msgstr "Test leak"
+
+msgid "btn_start_mos_test"
+msgstr "Start MOS test"
+
+msgid "btn_fetch_records"
+msgstr "Fetch records"
+
+msgid "btn_load"
+msgstr "Load"
+
+msgid "test_name"
+msgstr "Test name"
+
+msgid "this_test_uses"
+msgstr "This test uses"
+
+msgid "not"
+msgstr "not"
+
+msgid "this_test_shows"
+msgstr "This test shows"
+
+msgid "the_text_of_the_sentences_being_listened_to"
+msgstr "the text of the sentences being listened to"
+
+msgid "created_talker_angles"
+msgstr "Created talker angles"
+
+msgid "audio_clips_made_using_a_digital_device"
+msgstr "Audio clips made using a digital device"
+
+msgid "updates_recorded"
+msgstr "Updates recorded"
+
+msgid "events_recorded_by_real_people"
+msgstr "Events recorded by real people"
+
+msgid "setup_id"
+msgstr "Setup id"
+
+msgid "text"
+msgstr "Text"
+
+msgid "medium"
+msgstr "Medium"
+
+msgid "red"
+msgstr "Red"
+
+msgid "model"
+msgstr "Model"
+
+msgid "delete"
+msgstr "Delete"
+
+msgid "hint_load_settings"
+msgstr "Load settings to create MOS test"
+
+msgid "hint_title_no_phase"
+msgstr "No Phase Test Sets"
+
+msgid "hint_text_load_first"
+msgstr "To see sentences you have to load them up first."
+
+msgid "hint_text_upload"
+msgstr "Check to load <code>.zip</code> file containing a folder named <code>audio</code> and a file named <code>index.csv</code>. <code> Audio</code> folder contains all the digits on <code>.wav</code> form and <code> index.tsv</code> connects the identity of each MOS setting to a name the speaker in the audio folder."
+
+msgid "title_load_dials"
+msgstr "Load dials for MOS test"
+
+msgid "desc_index_csv_file_columns"
+msgstr "In <code>index.csv</code> are the following columns:<br>(Defined) Column 1 is a recording name in the <code>audio</code> folder.<br>(Defined) Column 2 is <code>R</code> if the sentence is taken but <code>S</code> if the sentence is a numerical expression.<br>(Defined) Column 3 is the sentence itself.<br>(Optional) Column 4 is a number in a row, if the same voice reads multiple sentences then it should always bear the same number here.<br>(Optional) Column 5 is the number of the sentence, if many voices read the same sentence they all have to bear the same number here.<br>(Optional) Column 6 is the number of the voice-generating model.<br>(Optional) Column 7 is a string or other that you want to use to mark the clipboard.<br>(Optional) Column 8 is a question of whether to ask a user question."
+
+msgid "see_example"
+msgstr "See Example"
+
+msgid "download"
+msgstr "Download"
+
+msgid "close"
+msgstr "Close"
+
+msgid "submit"
+msgstr "Submit"
+
+msgid "standard_form"
+msgstr "Standard form"
+
+msgid "standard_form_desc"
+msgstr "Apply if the charge is in standard form compare the above description"
+
+msgid "valid"
+msgstr "Valid"
+
+msgid "modify"
+msgstr "Modify"
+
+msgid "continue"
+msgstr "Continue"
+
+msgid "results_for"
+msgstr "Results for"
+
+msgid "fetch_data"
+msgstr "Fetch data"
+
+msgid "number_of_units"
+msgstr "Number of units"
+
+msgid "number_of_users"
+msgstr "Number of users"
+
+msgid "number_of_sentences"
+msgstr "Number of sentences"
+
+msgid "create"
+msgstr "Create"
+
+msgid "standard_event"
+msgstr "Standard event"
+
+msgid "settings"
+msgstr "Settings"

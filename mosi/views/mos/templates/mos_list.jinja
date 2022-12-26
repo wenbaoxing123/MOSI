@@ -1,11 +1,11 @@
 {% extends "_list.jinja" %}
-{% block title %}MOS prufur{% endblock %}
+{% block title %}{{_("title_mos_test")}}{% endblock %}
 {% block total %}{{mos_list.total}}{% endblock %}
 {% block buttons %}
     {% if current_user.is_admin() %}
         <a class='btn btn-secondary fourth-bg mr-2 float-right' href='{{url_for("mos.mos_create")}}'>
             {{macros.btn_icon('plus', 'r')}}
-            Búa til MOS
+            {{_("create_mos")}}
         </a>
     {% endif %}
 {% endblock %}

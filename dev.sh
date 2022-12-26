@@ -1,5 +1,5 @@
 export FLASK_APP=./mosi/wsgi.py
 export FLASK_DEBUG=1
 export FLASK_ENV=development
-flask run 
+flask run --host 0.0.0.0
 

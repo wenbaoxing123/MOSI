@@ -1,3 +1,4 @@
+# coding=utf-8
 import getpass
 import os
 import re
@@ -36,32 +37,31 @@ class AddDefaultRoles(Command):
         roles = [
             {
                 "name": "admin",
-                "description":
-                    'Umsjónarhlutverk með aðgang að notendastillingum',
+                "description": 'Monitoring role with access to user settings',
             },
             {
                 "name": "Notandi",
-                "description": 'Venjulegur notandi með grunn aðgang',
+                "description": 'Basic user',
             },
             {
                 "name": "Greinir",
-                "description": 'Greinir með takmarkað aðgengi',
+                "description": 'Analyses with limited accessibility',
             },
             {
                 "name": "ab_tester",
-                "description": 'Notandi sem tekur AB próf',
+                "description": 'User taking AB test',
             },
             {
                 "name": "mos_tester",
-                "description": 'Notandi sem tekur MOS próf',
+                "description": 'User taking MOS test',
             },
             {
                 "name": "test_partitipant",
-                "description": 'Notandi sem tekur eitthvað próf',
+                "description": 'User taking any test',
             },
             {
                 "name": "organiser",
-                "description": 'Notandi sem getur búið til próf',
+                "description": 'User who can create a test',
             },
 
         ]

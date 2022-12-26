@@ -190,28 +190,28 @@ MosDetailForm = model_form(
     db_session=db.session,
     field_args={
         "question": {
-            "label": "Spurning",
+            "label": "Question",
         },
         "display_name": {
-            "label": "Nafn á prófi",
+            "label": "Test name",
         },
         "form_text": {
-            "label": "Form texti", "widget": widgets.TextArea()
+            "label": "Form text", "widget": widgets.TextArea()
         },
         "help_text": {
-            "label": "Hjálpartexti", "widget": widgets.TextArea()
+            "label": "Help text", "widget": widgets.TextArea()
         },
         "done_text": {
-            "label": "Þakkartexti", "widget": widgets.TextArea()
+            "label": "Done text", "widget": widgets.TextArea()
         },
         "num_samples": {
-            "label": "Fjöldi setninga", "widget": widgets.html5.NumberInput(min=0, max=90)
+            "label": "Number of sentences", "widget": widgets.html5.NumberInput(min=0, max=90)
         },
         "use_latin_square": {
-            "label": "Nota latin-square"
+            "label": "Use latin square"
         },
         "show_text_in_test": {
-            "label": "Sýna texta við hljóðbút"
+            "label": "Show text in test"
         },
     },
     only=["question", "form_text", "help_text",
@@ -226,19 +226,18 @@ class MosItemSelectionForm(ModelForm):
 
 
 class MosTestForm(Form):
-    name = StringField("Nafn", [validators.required()])
-    age = IntegerField("Aldur", [validators.required(),
+    name = StringField("Name", [validators.required()])
+    age = IntegerField("Age", [validators.required(),
                        validators.NumberRange(min=10, max=120)])
-    audio_setup = StringField("Hvers konar heyrnatól/hátalara ertu með?", [validators.required()])
+    audio_setup = StringField("What kind of headphones do you have?", [validators.required()])
 
 
 
 
 class MosUploadForm(FlaskForm):
     is_g2p = BooleanField(
-        'Staðlað form.',
-        description='Hakið við ef skráin er á stöðluðu formi' +
-                    ' samanber lýsingu hér að ofan',
+        'Standard form.',
+        description='Apply if the charge is in standard form compare the above description',
         default=False)
     files = FileField(
         validators=[

@@ -131,7 +131,7 @@ def save_custom_wav(zip, zip_name, tsv_name, mos, id):
         webm_path = app.config["MOS_RECORDING_DIR"]+"{}".format(id)
         mc = tsvfile.read()
         c = csv.StringIO(mc.decode())
-        rd = csv.reader(c, delimiter=";")
+        rd = csv.reader(c, delimiter="\t")
         pathlib.Path(wav_path_dir).mkdir(exist_ok=True)
         pathlib.Path(webm_path).mkdir(exist_ok=True)
         uploaded_obj = []

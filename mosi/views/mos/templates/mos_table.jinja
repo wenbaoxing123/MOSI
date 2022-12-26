@@ -5,22 +5,22 @@
 
             </th>
             <th>
-                Auðkenni setningar
+                {{_("setup_id")}}
             </th>
             <th>
-                Texti
+                {{_("text")}}
             </th>
             <th>
-                Meðaleinkunn
+                {{_("medium")}}
             </th>
             <th>
-                Rödd
+                {{_("red")}}
             </th>
             <th>
-                Módel
+                {{_("model")}}
             </th>
             <th>
-                Annað
+                {{_("other")}}
             </th>
             <th>
                 <div class="btn-group" style="margin-bottom: -8px;">
@@ -81,7 +81,7 @@
                     </td>
                     <td>
                         <button id="deleteButton" name="{{mos.id}}" onClick="deletebutton(name)" class="btn btn-secondary btn-sm text-danger float-right" type="button" data-toggle='modal', data-target='#deleteModal'>
-                            {{macros.btn_icon('trash', 'r')}} Eyða
+                            {{macros.btn_icon('trash', 'r')}} {{_("delete")}}
                         </button>
                     </td>
                 </tr>

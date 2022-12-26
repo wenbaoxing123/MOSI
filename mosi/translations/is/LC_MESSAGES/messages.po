@@ -1,0 +1,193 @@
+# Icelandic translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-11-18 19:44+0800\n"
+"PO-Revision-Date: 2022-11-18 19:14+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: is\n"
+"Language-Team: is <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n%10==1 && n%100!=11 ? 0 : 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+msgid "hint_text_star_field"
+msgstr "(*) Stjörnumerkta reiti þarf að fylla"
+
+msgid "title_mos_test"
+msgstr "MOS prufur"
+
+msgid "user"
+msgstr "Notendur"
+
+msgid "title_ab_test"
+msgstr "AB prufur"
+
+msgid "title_sus_test"
+msgstr "SUS prufur"
+
+msgid "other"
+msgstr "Annað"
+
+msgid "create_mos"
+msgstr "Búa til MOS"
+
+msgid "date"
+msgstr "Dagsetning"
+
+msgid "identity"
+msgstr "Auðkenni"
+
+msgid "question"
+msgstr "Spurning"
+
+msgid "number"
+msgstr "Fjöldi"
+
+msgid "previous"
+msgstr "Fyrri"
+
+msgid "next"
+msgstr "Næsta"
+
+msgid "of"
+msgstr "af"
+
+msgid "btn_change_settings"
+msgstr "Breyta stillingum"
+
+msgid "btn_view_results"
+msgstr "Skoða niðurstöður"
+
+msgid "btn_test_leak"
+msgstr "Hlekkur á próf"
+
+msgid "btn_start_mos_test"
+msgstr "Hefja MOS próf"
+
+msgid "btn_fetch_records"
+msgstr "Sækja upptökur"
+
+msgid "btn_load"
+msgstr "Hlaða upp"
+
+msgid "test_name"
+msgstr "Nafn á prófi"
+
+msgid "this_test_uses"
+msgstr "Þetta próf notar"
+
+msgid "not"
+msgstr "ekki"
+
+msgid "this_test_shows"
+msgstr "Þetta próf sýnir"
+
+msgid "the_text_of_the_sentences_being_listened_to"
+msgstr "texta setningar sem hlustað er á"
+
+msgid "created_talker_angles"
+msgstr "Talgervingar sem búnar voru til"
+
+msgid "audio_clips_made_using_a_digital_device"
+msgstr "Hljóðklippur sem búnar voru til með hjálp talgervils"
+
+msgid "updates_recorded"
+msgstr "Upptökur sem teknar voru upp"
+
+msgid "events_recorded_by_real_people"
+msgstr "Upptökur sem teknar voru upp af alvöru fólki"
+
+msgid "setup_id"
+msgstr "Auðkenni setningar"
+
+msgid "text"
+msgstr "Texti"
+
+msgid "medium"
+msgstr "Meðaleinkunn"
+
+msgid "red"
+msgstr "Rödd"
+
+msgid "model"
+msgstr "Módel"
+
+msgid "delete"
+msgstr "Eyða"
+
+msgid "hint_load_settings"
+msgstr "Hladdu upp setningum til að búa til MOS próf"
+
+msgid "hint_title_no_phase"
+msgstr "Engar setningar í mos prufu"
+
+msgid "hint_text_load_first"
+msgstr "Til að sjá setningar þarf fyrst að hlaða þeim upp."
+
+msgid "hint_text_upload"
+msgstr "Athugaðu að hlaða þarf upp <code>.zip</code> skrá sem inniheldur möppu sem heitir <code>audio</code> og skrá sem heitir <code>index.csv</code>.<code> Audio</code> mappan inniheldur allar talgervingarnar á <code>.wav</code> formi og <code>index.tsv</code> tengir auðkenni hverrar MOS-setningar við nafn talgervingarinnar í audio möppunni."
+
+msgid "title_load_dials"
+msgstr "Hlaða upp talgervingum fyrir MOS próf"
+
+msgid "desc_index_csv_file_columns"
+msgstr "Í <code>index.csv</code> eru eftirfarandi dálkar:<br>(Áskilið) Dálkur 1 er nafn upptöku í <code>audio</code> möppunni.<br>(Áskilið) Dálkur 2 er <code>R</code> ef setningin er upptaka en <code>S</code> ef setningin er talgerving.<br>(Áskilið) Dálkur 3 er setningin sjálf.<br>(Valkvætt) Dálkur 4 er númer á rödd, ef sama röddin les margar setningar þá á hún alltaf að bera sama númer hér.<br>(Valkvætt) Dálkur 5 er númer á setningu, ef margar raddir lesa sömu setninguna þá þurfa þær allar að bera sama númar hér.<br>(Valkvætt) Dálkur 6 er númer á modeli sem býr til röddina.<br>(Valkvætt) Dálkur 7 er strengur eða annað sem þú vilt geta notað til að merkja klippuna.<br>(Valkvætt) Dálkur 8 er spurning ef það á að bera upp spurningu fyrir notnendur."
+
+msgid "see_example"
+msgstr "Sjá sýnidæmi"
+
+msgid "download"
+msgstr "Sýnidæmi"
+
+msgid "close"
+msgstr "Loka"
+
+msgid "submit"
+msgstr "Klára"
+
+msgid "standard_form"
+msgstr "Staðlað form"
+
+msgid "standard_form_desc"
+msgstr "Hakið við ef uphleðslan er á stöðluðu formi samanber lýsingu hér að ofan"
+
+msgid "valid"
+msgstr "Velja"
+
+msgid "modify"
+msgstr "Breyta"
+
+msgid "continue"
+msgstr "Halda áfram"
+
+msgid "results_for"
+msgstr "Niðurstöður fyrir"
+
+msgid "fetch_data"
+msgstr "Sækja gögn"
+
+msgid "number_of_units"
+msgstr "Fjöldi einkunna"
+
+msgid "number_of_users"
+msgstr "Fjöldi notenda"
+
+msgid "number_of_sentences"
+msgstr "Fjöldi setninga"
+
+msgid "create"
+msgstr "Búð til"
+
+msgid "standard_event"
+msgstr "Staðalfrávik"
+
+msgid "settings"
+msgstr "Setningar"

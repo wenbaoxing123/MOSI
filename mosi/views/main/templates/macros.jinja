@@ -24,25 +24,25 @@
             {% if items.has_prev %}
                 <li class="page-item"><a class="page-link third-bg" href="{{url}}?page={{items.prev_num}}{% if request.args.get('sort_by')%}&sort_by={{request.args.get('sort_by')}}{% endif %}{% if request.args.get('order')%}&order={{request.args.get('order')}}{% endif %}">
                     {{ btn_icon('arrow-left', 'r')}}
-                    Fyrri
+                    {{_("previous")}}
                 </a></li>
             {% else %}
                 <li class="page-item disabled"><a class="page-link second-bg" href="#">
                     {{ btn_icon('arrow-left', 'r')}}
-                    Fyrri
+                    {{_("previous")}}
                 </a></li>
             {% endif %}
             <li class='page-item active'>
-                <span class='page-link third-bg'>{{items.page}} af {{items.pages}}</span>
+                <span class='page-link third-bg'>{{items.page}} {{_("of")}} {{items.pages}}</span>
             </li>
             {% if items.has_next %}
                 <li class="page-item"> <a class="page-link third-bg" href="{{url}}?page={{items.next_num}}{% if request.args.get('sort_by')%}&sort_by={{request.args.get('sort_by')}}{% endif %}{% if request.args.get('order')%}&order={{request.args.get('order')}}{% endif %}">
-                    Næsta
+                    {{_("next")}}
                     {{ btn_icon('arrow-right', 'l')}}
                 </a></li>
             {% else %}
                 <li class="page-item disabled"><a class="page-link second-bg" href="#">
-                    Næsta
+                    {{_("next")}}
                     {{ btn_icon('arrow-right', 'l')}}
                 </a></li>
             {% endif %}
@@ -158,7 +158,7 @@
                 {% else %}
                     {% if not current_user.progression.is_icon_equipped(icon) %}
                         <a href="{{url_for('shop.icon_equip', icon_id=icon.id, user_id=current_user.id)}}" class="btn btn-secondary text-success btn-sm rounded-pill text-center float-right">
-                            <span class="mr-2 ml-2 font-weight-bold">Velja</span>
+                            <span class="mr-2 ml-2 font-weight-bold">{{_("valid")}}</span>
                             <i class="fas fa-check mr-2"></i>
                         </a>
                     {% endif %}
@@ -226,7 +226,7 @@
                 {% else %}
                     {% if not current_user.progression.is_title_equipped(title) %}
                         <a href="{{url_for('shop.title_equip', title_id=title.id, user_id=current_user.id)}}" class="btn btn-secondary text-success btn-sm rounded-pill text-center float-right">
-                            <span class="mr-2 ml-2 font-weight-bold">Velja</span>
+                            <span class="mr-2 ml-2 font-weight-bold">{{_("valid")}}</span>
                             <i class="fas fa-check mr-2"></i>
                         </a>
                     {% endif %}
@@ -293,7 +293,7 @@
                 {% else %}
                     {% if not current_user.progression.is_quote_equipped(quote) %}
                         <a href="{{url_for('shop.quote_equip', quote_id=quote.id, user_id=current_user.id)}}" class="btn btn-secondary text-success btn-sm rounded-pill text-center float-right">
-                            <span class="mr-2 ml-2 font-weight-bold">Velja</span>
+                            <span class="mr-2 ml-2 font-weight-bold">{{_("valid")}}</span>
                             <i class="fas fa-check mr-2"></i>
                         </a>
                     {% endif %}
@@ -414,7 +414,7 @@
                 {% else %}
                     {% if not current_user.progression.is_font_equipped(font) %}
                         <a href="{{url_for('shop.font_equip', font_id=font.id, user_id=current_user.id)}}" class="btn btn-secondary text-success btn-sm rounded-pill text-center float-right">
-                            <span class="mr-2 ml-2 font-weight-bold">Velja</span>
+                            <span class="mr-2 ml-2 font-weight-bold">{{_("valid")}}</span>
                             <i class="fas fa-check mr-2"></i>
                         </a>
                     {% endif %}
